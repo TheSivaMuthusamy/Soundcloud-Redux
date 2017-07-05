@@ -1,10 +1,10 @@
-# To-Do-List
+# Soundcloud Client
 
-An electron-based ToDoList app built in React using the material-ui package. The list is stored locally, and adding to the list is as simple as typing it in the text area and hitting the enter key. Clicking on the checkbox next to items on the list deletes them from the list.
+A Soundcloud Client built with Redux and React that can be used to play music from a user's Soundcloud stream. No css integrated yet so it's not pretty to look at, but it is functional.
 
 ---
 
 ###  Installation
 
 - `npm install`
-- `npm run electron`
+- `npm run start`
