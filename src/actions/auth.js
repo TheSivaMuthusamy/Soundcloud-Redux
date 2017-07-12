@@ -33,7 +33,11 @@ function fetchStream(session) {
     fetch(`//api.soundcloud.com/me/activities?limit=20&offset=0&oauth_token=${session.oauth_token}`)
       .then((response) => response.json())
       .then((data) => {
-        dispatch(setTracks(data.collection));
+        const unfiltered = data.collection
+        const tracks = unfiltered.filter(function(el) {
+          return el.type != "playlist" 
+        })
+        dispatch(setTracks(tracks));      
       });
   };
 }
